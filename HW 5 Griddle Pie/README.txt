@@ -1,1 +1,1 @@
-hi
+This program attempts to estimate pi
