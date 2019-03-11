@@ -11,8 +11,7 @@ constexpr unsigned npoints = 100;
 constexpr void calculateCutoffs(array<double, npoints>& cutoffs) {
 	for (unsigned i = 0; i < npoints; ++i) {
 		double temp = sqrt(pow((npoints - 1), 2) - pow(i, 2));
-		cutoffs[i] = temp;
-		const_cast<int&>(static_cast<std::array<int, H> const&>[j])
+		const_cast<double&>(static_cast<std::array<double, npoints> const&>(cutoffs)[i]) = temp;
 		//cout << "Cutoff " << i << ": " << temp << "\n";
 	}
 }
@@ -21,7 +20,7 @@ constexpr void calculateCutoffs(array<double, npoints>& cutoffs) {
 constexpr int countPoints(array<double, npoints>& cutoffs) {
 	int insidePoints = 0;
 	for (unsigned i = 0; i < npoints; ++i) {
-		insidePoints += static_cast<int>(cutoffs[i]);
+		insidePoints += static_cast<int>(const_cast<double&>(static_cast<std::array<double, npoints> const&>(cutoffs)[i]));
 	}
 	insidePoints += npoints + 1;
 	return insidePoints;
