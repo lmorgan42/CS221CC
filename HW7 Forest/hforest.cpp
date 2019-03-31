@@ -18,9 +18,8 @@ bool compare_trees(HTree::tree_ptr_t t1, HTree::tree_ptr_t t2) {
 //Returns a pointer to the HTree with the highest value in the root node, and removes it from the forest
 HTree::tree_ptr_t HForest::pop_tree() {
 	std::make_heap(trees.begin(), trees.end(), compare_trees);
-	std::reverse(trees.begin(), trees.end());
-	HTree::tree_ptr_t toRe = trees.back();
-	trees.pop_back();
+	HTree::tree_ptr_t toRe = trees.front();
+	trees.erase(trees.begin());
 	return toRe;
 }
 

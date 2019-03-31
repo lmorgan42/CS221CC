@@ -1,5 +1,5 @@
 CXX = g++
-CCFLAGS = -g -std=c++17 -Wall -Wextra -Pedantic
+CCFLAGS = -g -std=c++17 -Wall -Wextra -pedantic
 
 forest: htree.o test_hforest.o hforest.o
 	$(CXX) -o test_hforest test_hforest.o hforest.o htree.o

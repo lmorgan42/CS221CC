@@ -4,7 +4,6 @@
  */
 
 #pragma once
-#include "pch.h"
 #include <memory>
 #include <list>
 #include <iostream>
