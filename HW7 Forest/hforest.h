@@ -4,7 +4,7 @@
 
 class HForest {
 private:
-	std::vector<HTree::tree_ptr_t> trees;
+	std::vector<HTree::tree_ptr_t> trees_;
 
 public:
 	uint64_t size() const;
