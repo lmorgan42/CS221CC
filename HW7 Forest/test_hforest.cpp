@@ -30,6 +30,10 @@ void testForest() {
 	out = m->pop_tree();
 	std::cout << "Popping final tree, expected value: 3, got: " << out->get_value() << std::endl;
 	std::cout << "Size now " << m->size() << std::endl;
+	
+	out = m->pop_tree();
+	std::cout << "Popping final tree, expected value: nullptr, got: " << out << std::endl;
+	std::cout << "Size now " << m->size() << std::endl;
 
 	std::cout << "Deleteing forest..." << std::endl;
 

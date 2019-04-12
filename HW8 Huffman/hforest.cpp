@@ -1,5 +1,6 @@
 #include "hforest.h"
 #include <algorithm>
+#include <map>
 
 //Returns how many trees are in the forest
 uint64_t HForest::size() const {
@@ -23,4 +24,3 @@ HTree::tree_ptr_t HForest::pop_tree() {
 	trees_.erase(trees_.begin());
 	return toRe;
 }
-
